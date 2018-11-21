@@ -1,10 +1,12 @@
-![](https://app.yinxiang.com/shard/s5/res/affa0944-c2df-4fb1-82f4-c76d9531e1f0.jpg)
+![101542770752_.pic.jpg](https://upload-images.jianshu.io/upload_images/5901041-b77a9ae3620e9d08.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 ## 引言
 
 HTTP协议是Hyper Text Transfer Protocol（超文本传输协议）的缩写,是用于从万维网服务器传输超文本到本地浏览器的传送协议。HTTP 是基于 TCP/IP 协议通信协议来传递数据（HTML 文件、图片文件、查询结果等）。它不涉及数据包（packet）传输，主要规定了客户端和服务器之间的通信格式，默认使用80端口。
 
-![](https://app.yinxiang.com/shard/s5/res/58e9a844-76e9-4c2f-98a7-596f995bf45f.jpg)
+![image.png](https://upload-images.jianshu.io/upload_images/5901041-4779af9ca994527a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 ### 一、Http的特点
 
@@ -16,13 +18,16 @@ HTTP协议是Hyper Text Transfer Protocol（超文本传输协议）的缩写,�
 
 4、无状态：HTTP协议是无状态的，HTTP 协议自身不对请求和响应之间的通信状态进行保存。任何两次请求之间都没有依赖关系。直观地说，就是每个请求都是独立的，与前面的请求和后面的请求都是没有直接联系的。协议本身并不保留之前一切的请求或 响应报文的信息。这是为了更快地处理大量事务，确保协议的可伸缩性，而特意把 HTTP 协议设计成如此简单的。
 
-![](https://app.yinxiang.com/shard/s5/res/f29f0a01-f224-437b-bc12-09fef8822b24.jpg)
+![image.png](https://upload-images.jianshu.io/upload_images/5901041-d145d75b5987fd04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
 
 ### 二、Http报文
 
 Http报文包括请求报文和响应报文两大部分，其中请求报文由请求行（request line）、请求头（header）、空行和请求体四个部分组成。而响应报文由状态行、响应头部、空行和响应体四个部分组成。接下来我们详细介绍下请求报文的各个部分及其作用。
 
-![](https://app.yinxiang.com/shard/s5/res/b5f32b8f-92d6-4116-ae61-29950799355a.jpg)
+![image.png](https://upload-images.jianshu.io/upload_images/5901041-f8a3e3a4335cf5f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 #### 1、请求行
 
@@ -99,13 +104,15 @@ name=tom&password=1234&realName=tomson
 
 HTTP协议的初始版本中，每进行一次HTTP通信就要断开一次TCP连接。以当年的通信情况来说，因为都是些容量很小的文本传输，所以即使这样也没有多大问题。可随着 HTTP 的 普及，文档中包含大量图片的情况多了起来。比如，使用浏览器浏览一个包含多张图片的 HTML 页面时，在发送请求访问 HTML 页面资源的同时，也会请 求该 HTML 页面里包含的其他资源。因此，每次的请求都会造成无谓的 TCP 连接建立和断开，增加通信量的 开销。
 
-![](https://app.yinxiang.com/shard/s5/res/5d3c0e8c-31a7-41fb-a07c-9afa2591073d.jpg)
+![image.png](https://upload-images.jianshu.io/upload_images/5901041-53ac31f98dd514db.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 #### 2、持久连接的特点
 
 为解决上述 TCP 连接的问题， HTTP/1.1 和一部分的 HTTP/1.0 想出了持久连接（HTTP Persistent Connections，也称为 HTTP keep-alive 或 HTTP connection reuse）的方法。持久连接的特点是，只要任意一端没有明确提出断开连接，则保持TCP连接状态。
 
-![ce9cee3d7433cffcc010fe090e694b3b.jpeg](https://app.yinxiang.com/shard/s5/res/845a12bc-391a-4b4e-ae0b-5824463ca2e5.jpg)
+![image.png](https://upload-images.jianshu.io/upload_images/5901041-55327265af439ed1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 持久连接的好处在于减少了 TCP 连接的重复建立和断开所造成的额外开销，减轻了服务器端的负载。另外， 减少开销的那部分时间，使 HTTP 请求和响应能够更早地结束，这样 Web 页面的显示速度也就相应提高了。
 
@@ -117,7 +124,8 @@ HTTP协议的初始版本中，每进行一次HTTP通信就要断开一次TCP连
 
 这样就能够做到同时并行发送多个请求，而不需要一个接一个地等待响应了。通俗地讲，请求打包一次传输过去，响应打包一次传递回来。管线化的前提是在持久连接下。
 
-![](https://app.yinxiang.com/shard/s5/res/81e2500a-e8e4-402e-94b0-4b2f362f576d.jpg)
+![image.png](https://upload-images.jianshu.io/upload_images/5901041-25b108300215f3e8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 假如当请求一个包含 10 张图片的 HTML Web 页面，与挨个连接相比，用持久连接可以让请求更快结束。 而管线化技术则比持久连接还要快。请求数越多，时间差就越明显。客户端需要请求这十个资源。以前的做法是，在同一个TCP连接里面，先发送A请求，然后等待服务器做出回应，收到后再发出B请求，以此类推，而管道机制则是允许浏览器同时发出这十个请求，但是服务器还是按照顺序，先回应A请求，完成后再回应B请求。
 
