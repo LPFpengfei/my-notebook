@@ -43,7 +43,8 @@ git reset HEAD <file>        //取消之前 git add 添加
 
 
 
-![78331d074922628ede29d3abc6fbfc00.png](evernotecid://E91B6B4C-B3EA-4FB2-AE09-DF3B3147067C/appyinxiangcom/16003862/ENResource/p240)
+![image.png](https://upload-images.jianshu.io/upload_images/5901041-f597c48321c00dcb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 - git reset
 
@@ -63,7 +64,8 @@ git revert HEAD //撤销前一次commit
 
 不能随便删除已经发布的提交，这时需要通过revert创建要否定的提交。
 
-![b4ee974e1bdcba9f042084624d93d744.png](evernotecid://E91B6B4C-B3EA-4FB2-AE09-DF3B3147067C/appyinxiangcom/16003862/ENResource/p241)
+![image.png](https://upload-images.jianshu.io/upload_images/5901041-384670b871f77b9c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 如果不小心提交了不想要的代码，而小伙伴在你发现时，已经提交了，这时候就不能简单的回退版本。
 
@@ -102,9 +104,11 @@ git add README
 
 ##### git rebase和git merge区别
 
-![a8b50aa4f9ab52e5bb00a0f6387ac265.png](evernotecid://E91B6B4C-B3EA-4FB2-AE09-DF3B3147067C/appyinxiangcom/16003862/ENResource/p242)
+![image.png](https://upload-images.jianshu.io/upload_images/5901041-8914eeaf0da031f6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-![34aa29385b06c29502de0e6a53f912df.png](evernotecid://E91B6B4C-B3EA-4FB2-AE09-DF3B3147067C/appyinxiangcom/16003862/ENResource/p243)
+
+![image.png](https://upload-images.jianshu.io/upload_images/5901041-75f0907725a60113.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 在rebase的过程中，也许会出现冲突(conflict)。 在这种情况，Git会停止rebase并会让你去解决冲突；在解决完冲突后，用"git-add"命令去更新这些内容的索引(index)， 然后，你无需执行 git-commit，只要执行:
 
@@ -140,9 +144,11 @@ git rebase -i HEAD~2
 git push -f
 ```
 
-![6e637c8020b732248aa34f419cebd3c5.png](evernotecid://E91B6B4C-B3EA-4FB2-AE09-DF3B3147067C/appyinxiangcom/16003862/ENResource/p244)
+![image.png](https://upload-images.jianshu.io/upload_images/5901041-59881abcdfb62e69.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-![51c3364384aed1caf9883892115b88da.png](evernotecid://E91B6B4C-B3EA-4FB2-AE09-DF3B3147067C/appyinxiangcom/16003862/ENResource/p247)
+
+![image.png](https://upload-images.jianshu.io/upload_images/5901041-92a40a4a997f850d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 #### git status
 
@@ -237,7 +243,8 @@ git merge <branch name>                //合并分支
 
 如果分支未pull最新代码，那么提交的时候，历史纪录就不清晰;汇合分支上的提交，然后一同合并到分支
 
-![2f2956d2d26008530092b0790e767baa.png](evernotecid://E91B6B4C-B3EA-4FB2-AE09-DF3B3147067C/appyinxiangcom/16003862/ENResource/p239)
+![image.png](https://upload-images.jianshu.io/upload_images/5901041-2aea300c88e64d2d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 ```shell
 git merge –squash <branch name>
